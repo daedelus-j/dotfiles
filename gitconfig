@@ -1,0 +1,23 @@
+[user]
+	email = m@hamrah.com
+	name = mhamrah
+[github]
+	user = mhamrah
+	token = 58f6138ce9ed22fd2712826a986c1471
+[http]
+  sslVerify = false
+[push]
+	default = current
+[brnach]
+  autosetuprebase = always
+[core]
+  autocrlf = input
+	excludesfile = /Users/Michael/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[color]
+	ui = true
