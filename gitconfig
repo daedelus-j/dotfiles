@@ -140,6 +140,7 @@ rem="!git config -l | grep remote.*url | tail -n +2"
 
 #subtree add
   sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f" 
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 # }}}
 
 [rerere]
