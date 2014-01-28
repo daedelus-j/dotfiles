@@ -82,6 +82,7 @@
   lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
 #list all aliases
   la = "!git config -l | grep alias | cut -c 7-"
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   diff = diff --word-diff
   d = diff --word-diff
   dc = diff --cached
@@ -99,6 +100,9 @@
   rh = reset --hard
   rh1 = reset HEAD^ --hard
   rh2 = reset HEAD^^ --hard
+
+#prune
+  po = remote prune origin
 
 #stash
   sl = stash list
@@ -140,7 +144,6 @@ rem="!git config -l | grep remote.*url | tail -n +2"
 
 #subtree add
   sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f" 
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 # }}}
 
 [rerere]
