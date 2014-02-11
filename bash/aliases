@@ -1,0 +1,80 @@
+# project specific aliases
+alias pmic="cd ~/projects/apps/policymic"
+alias pmobile="cd ~/projects/apps/mobile"
+
+# misc
+alias ns="npm start"
+alias ni="npm install"
+alias ndev="NODE_ENV=dev nodemon -w . server.js"
+
+# cd
+alias ..='cd ..'
+
+# ls 
+alias d='ls -lha'
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
+
+# grep
+alias grn="grep -rn"
+
+# mamp logs
+alias stache="sudo apachectl -k start"
+
+# mamp logs
+alias tailmamp="tail -f /Applications/MAMP/logs/*.log"
+
+# creates a webserver in the current directory
+alias webserver="python -m SimpleHTTPServer"
+
+# creates a webserver in the current directory
+alias rserv="rails server -u"
+
+# git 
+alias rmheadall="find . -name '*~HEAD' |xargs rm" 
+alias rmorigall="find . -name '*.orig' |xargs rm" 
+alias gs='git status'
+alias ga="git add"
+alias gd="git diff"
+alias gp="git push"
+alias gco="git checkout"
+alias gba="git branch -a"
+alias gbl="git branch -l"
+alias gm="git merge --no-ff"
+alias gmt="git mergetool --tool=openDiff"
+alias gc="git commit -m"
+alias gca="git commit -am"
+alias gcv="git commit --no-verify -am"
+alias gb="git reset --soft"
+alias gl="git log --pretty='format:%Cgreen%h%Creset %an - %s' --graph"
+alias glg='git log --graph --pretty=format:"%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset" --date=relative'
+
+# mkdir and cd into it:
+mkcd () { mkdir -p "$@" && cd "$@"; }
+
+# antlr
+alias antlr4='java -jar /usr/local/lib/antlr-4.0-complete.jar'
+#alias grun  ='java org.antlr.v4.runtime.misc.TestRig'
+
+# I've given up on memorizing tar syntax, so:
+extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xjf $1 ;;
+            *.tar.gz)    tar xzf $1 ;;
+            *.bz2)       bunzip2 $1 ;;
+            *.rar)       rar x $1 ;;
+            *.gz)        gunzip $1 ;;
+            *.tar)       tar xf $1 ;;
+            *.tbz2)      tar xjf $1 ;;
+            *.tgz)       tar xzf $1 ;;
+            *.zip)       unzip $1 ;;
+            *.Z)         uncompress $1 ;;
+            *)           echo "'$1' cannot be extracted via extract()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+

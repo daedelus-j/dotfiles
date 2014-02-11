@@ -1,9 +1,28 @@
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'derekwyatt/vim-scala'
-Bundle 'Shougo/neocomplcache'
-Bundle 'twe4ked/vim-peepopen'
+Bundle 'mattn/emmet-vim'
+Bundle 'tpope/vim-fugitive'
 Bundle 'pivotal/tmux-config'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'Yggdroot/indentLine'
 Bundle 'suan/vim-instant-markdown'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'guns/xterm-color-table'
+Bundle 'Yggdroot/indentLine'
+Bundle 'heavenshell/vim-jsdoc'
+Bundle 'nono/vim-handlebars'
+Bundle 'ChrisJohnsen/tmux-MacOSX-pasteboard'
+Bundle 'eraserhd/vim-ios'
+Bundle 'eraserhd/vim-kiwi'
+Bundle 'msanders/cocoa.vim'
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
+Bundle 'digitaltoad/vim-jade'
+
+
+Bundle 'ervandew/supertab'
+Bundle "honza/vim-snippets"
+" Bundle 'msanders/snipmate.vim'
+Bundle 'ervandew/snipmate.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+
+" Bundle 'jerrymarino/xcodebuild.vim'

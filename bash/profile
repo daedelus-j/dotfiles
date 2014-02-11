@@ -1,0 +1,27 @@
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# After each command, save and reload history
+##export CLASSPATH=".:/usr/local/lib/antlr-4.0-complete.jar:$CLASSPATH"
+export PATH=/usr/local/Cellar/node/0.10.18/bin/:/home/amadeus/bin:/home/amadeus/bin/lein:/usr/local/bin:/usr/local/share/python:/usr/local/mysql/bin:/home/amadeus/ruby1.9/bin/:/usr/local/sbin:/home/amadeus/ruby1.9/lib/ruby/gems/1.9/bin/:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+echo ' '
+echo -n '  A '
+sleep .4
+echo '  to the'
+echo -n '    M '
+sleep .4
+echo '  to the'
+echo -n '      A '
+sleep .4
+echo '  to the'
+echo '        DEUS'
+echo ''
+
+# cert.pem file for openssl 
+export SSL_CERT_FILE=/usr/local/etc/openssl/certs/cert.pem
+
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
+
