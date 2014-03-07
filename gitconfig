@@ -1,6 +1,6 @@
 [github]
-	user = mhamrah
-	token = 58f6138ce9ed22fd2712826a986c1471
+	user = daedelus-j
+	token = 7ccf0cc8977a116fa8baa171f5ed06da6134df24
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -11,8 +11,8 @@
 	trustExitCode = true
 
 [user]
-  name = Michael Hamrah
-  email = m@hamrah.com
+  name = ACJDG
+  email = amadeusjunqueira@gmail.com
 
 [http]
   sslVerify = false

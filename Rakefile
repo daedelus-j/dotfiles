@@ -200,6 +200,10 @@ COPIED_FILES = filemap(
 )
 
 LINKED_FILES = filemap(
+  'bash'          => '~/.bash',
+  'gitconfig'     => '~/.gitconfig',
+  'agignore'      => '~/.agignore',
+  'editorconfig'  => '~/.editorconfig',
   'vim'           => '~/.vim',
   'tmux.conf'     => '~/.tmux.conf',
   'vimrc'         => '~/.vimrc',
