@@ -5,7 +5,7 @@ alias pmobile="cd ~/projects/apps/mobile"
 # misc
 alias ns="npm start"
 alias ni="npm install"
-alias ndev="NODE_ENV=dev nodemon -w . server.js"
+alias ndev="NODE_ENV=local nodemon -w . mobile.js"
 
 # cd
 alias ..='cd ..'
