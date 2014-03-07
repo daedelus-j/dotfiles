@@ -51,7 +51,7 @@ if exists('$TMUX')  " Support resizing in tmux
 endif
 
 " keyboard shortcuts
-let mapleader = ','
+let mapleader = '\'
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k

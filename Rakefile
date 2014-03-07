@@ -200,15 +200,17 @@ COPIED_FILES = filemap(
 )
 
 LINKED_FILES = filemap(
-  'bash'          => '~/.bash',
-  'gitconfig'     => '~/.gitconfig',
-  'ackrc'         => '~/.ackrc',
-  'agignore'      => '~/.agignore',
-  'editorconfig'  => '~/.editorconfig',
-  'vim'           => '~/.vim',
-  'tmux.conf'     => '~/.tmux.conf',
-  'vimrc'         => '~/.vimrc',
-  'vimrc.bundles' => '~/.vimrc.bundles'
+  'bash'                => '~/.bash',
+  'gitconfig'           => '~/.gitconfig',
+  'ackrc'               => '~/.ackrc',
+  'agignore'            => '~/.agignore',
+  'editorconfig'        => '~/.editorconfig',
+  'vim'                 => '~/.vim',
+  'tmux.conf'           => '~/.tmux.conf',
+  'vimrc'               => '~/.vimrc',
+  'vimrc.local'         => '~/.vimrc.local',
+  'vimrc.bundles.local' => '~/.vimrc.bundles.local',
+  'vimrc.bundles'       => '~/.vimrc.bundles'
 )
 
 desc 'Install these config files.'
