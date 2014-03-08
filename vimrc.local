@@ -11,13 +11,13 @@ inoremap jk <ESC>
 "set hlsearch
 "nmap <leader>hl :let @/ = ""<CR>
 
-
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'MacVim.app')
     colorscheme solarized
   else
-    colorscheme deus
+    colorscheme solarized
+"    colorscheme deus
   endif
 endif
 

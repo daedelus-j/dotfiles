@@ -19,6 +19,8 @@ Bundle 'digitaltoad/vim-jade'
 
 
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'altercation/vim-colors-solarized'
 Bundle "honza/vim-snippets"
 " Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/snipmate.vim'
