@@ -1,2 +1,2 @@
 set transparency=2
-set guifont=Consolas:h13
+set guifont=Menlo:h14

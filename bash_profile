@@ -1,11 +1,14 @@
 
-source ~/.bash/path.sh
-source ~/.bash/env.sh
-source ~/.bash/completion.sh
+#source ~/.bash/path.sh
+#source ~/.bash/env.sh
 
-source ~/.bash/aliases.sh
+source ~/.bash/aliases
+source ~/.bash/completions
+source ~/.bash/bookmarks
 source ~/.bash/functions.sh
-source ~/.bash/prompt.sh
+source ~/.bash/prompt
+source ~/.bash/profile
+source ~/.bash/extras
 
 #function parse_git_dirty {
 #  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
