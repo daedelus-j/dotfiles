@@ -146,7 +146,7 @@ set softtabstop=2
 set expandtab
 set autoindent
 set copyindent
-set invwrap
+set nowrap
 
 
 let g:ctrlp_match_window = 'order:ttb,max:20'

@@ -31,6 +31,8 @@ alias webserver="python -m SimpleHTTPServer"
 # creates a webserver in the current directory
 alias rserv="rails server -u"
 
+alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+
 # git 
 alias rmheadall="find . -name '*~HEAD' |xargs rm" 
 alias rmorigall="find . -name '*.orig' |xargs rm" 

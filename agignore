@@ -10,7 +10,9 @@
 *.gem
 */out/**
 */vendor/**
-*/node_modules/*
+*/cms/node_modules/*
+*/mobile/node_modules/*
+*/api/node_modules/*
 */policymic/plugins/*
 */frontend/lib/*
 */bower_components/*
