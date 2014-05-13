@@ -44,7 +44,7 @@ silent! autocmd VimEnter * RemoveConflictingAlignMaps
 nmap <leader>ff :NERDTreeFind<CR>
 
 " different tab settings for different langs
-" nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+nmap \M :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 " nmap \T :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
 " nmap \M :set noexpandtab tabstop=8 softtabstop=4 shiftwidth=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
@@ -102,6 +102,8 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_max_depth=60
 " let g:ctrlp_working_path_mode = 'ra'
 
+set omnifunc=syntaxcomplete#Complete
+
 let g:ctrlp_max_files = 0
 let g:ctrlp_working_path_mode = 0
 
@@ -118,21 +120,7 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
-
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  let g:ackprg = 'ag --nogroup --column --smart-case'
-
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l -U --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " call ReloadAllSnippets()
 
@@ -156,8 +144,8 @@ if filereadable(expand("~/.vimrc.local.mappings"))
   source ~/.vimrc.local.mappings
 endif
 
-if !exists('g:snips_trigger_key')
-  let g:snips_trigger_key = '< tab>'
-endif
+" if !exists('g:snips_trigger_key')
+"   let g:snips_trigger_key = '< tab>'
+" endif
 
 let g:SuperTabDefaultCompletionType = "context"

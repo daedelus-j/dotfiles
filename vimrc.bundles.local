@@ -7,7 +7,7 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'Yggdroot/indentLine'
 Bundle 'heavenshell/vim-jsdoc'
-Bundle 'nono/vim-handlebars'
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'ChrisJohnsen/tmux-MacOSX-pasteboard'
 Bundle 'eraserhd/vim-ios'
 Bundle 'eraserhd/vim-kiwi'
@@ -17,12 +17,17 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'einars/js-beautify'
 Bundle 'digitaltoad/vim-jade'
 
+Bundle 'wavded/vim-stylus'
 
 Bundle 'ervandew/supertab'
-Bundle "honza/vim-snippets"
+Bundle 'garbas/vim-snipmate'
+" Bundle 'honza/vim-snippets'
 " Bundle 'msanders/snipmate.vim'
-Bundle 'ervandew/snipmate.vim'
+" Bundle 'ervandew/snipmate.vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 
+
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
 " Bundle 'jerrymarino/xcodebuild.vim'

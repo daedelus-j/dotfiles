@@ -69,7 +69,7 @@ go(){
     echo ' bookmark foo'
   else
     dir=`echo "$bookmark" | cut -d\| -f1`
-    echo -e "going to \e[1;34m$dir] !"
+    echo $'going to \e[1;49m' $dir $'!'
     cd "$dir"
   fi
 }
