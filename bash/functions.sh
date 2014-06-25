@@ -24,3 +24,7 @@ function pwf {
 function mcd {
   mkdir -p "$1" && cd "$1"
 }
+
+function recentCommits {
+  for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr" $branch | head -n 1` \\t$branch; done | sort -r
+}

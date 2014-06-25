@@ -30,4 +30,5 @@ Bundle "tomtom/tlib_vim"
 
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
+Bundle 'lukerandall/haskellmode-vim'
 " Bundle 'jerrymarino/xcodebuild.vim'
