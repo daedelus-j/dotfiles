@@ -1,6 +1,6 @@
 " Maximum Awesome.
 " Please create ~/.vim.bundles.local and add any extra bundles you want there
-Bundle 'airblade/vim-gitgutter'
+" Bundle 'airblade/vim-gitgutter'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'austintaylor/vim-indentobject'
 Bundle 'gmarik/vundle'

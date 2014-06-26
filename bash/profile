@@ -9,13 +9,13 @@ export PATH=/usr/local/Cellar/node/0.10.18/bin/:/home/amadeus/bin:/home/amadeus/
 
 echo ' '
 echo -n '  A '
-sleep .4
+sleep .2
 echo '  to the'
 echo -n '    M '
-sleep .4
+sleep .2
 echo '  to the'
 echo -n '      A '
-sleep .4
+sleep .2
 echo '  to the'
 echo '        DEUS'
 echo ''

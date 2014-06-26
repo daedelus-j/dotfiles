@@ -1,6 +1,6 @@
 [github]
-	user = daedelus-j
-	token = 7ccf0cc8977a116fa8baa171f5ed06da6134df24
+  user = daedelus-j
+  #token = 7ccf0cc8977a116fa8baa171f5ed06da6134df24
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

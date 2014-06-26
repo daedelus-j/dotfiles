@@ -149,3 +149,6 @@ endif
 " endif
 
 let g:SuperTabDefaultCompletionType = "context"
+
+" remove preview window for tern completion
+autocmd BufEnter * set completeopt-=preview
