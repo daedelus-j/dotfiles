@@ -50,7 +50,7 @@ nmap \M :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 " random mappings
-nmap <C-n> :bnext<CR>
+" nmap <C-N> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
 nmap <leader>ww :Gstatus<CR>
@@ -139,6 +139,7 @@ set nowrap
 
 let g:ctrlp_match_window = 'order:ttb,max:20'
 
+let JSHintUpdateWriteOnly=1
 
 if filereadable(expand("~/.vimrc.local.mappings"))
   source ~/.vimrc.local.mappings

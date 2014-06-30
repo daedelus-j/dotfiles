@@ -1,9 +1,9 @@
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'derekwyatt/vim-scala'
-Bundle 'mattn/emmet-vim'
+" Bundle 'mattn/emmet-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'pivotal/tmux-config'
-Bundle 'christoomey/vim-tmux-navigator'
+" Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'suan/vim-instant-markdown'
 Bundle 'Yggdroot/indentLine'
 Bundle 'heavenshell/vim-jsdoc'
@@ -28,6 +28,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 
+Bundle "terryma/vim-multiple-cursors"
 
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
