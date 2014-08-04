@@ -17,6 +17,8 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'einars/js-beautify'
 Bundle 'digitaltoad/vim-jade'
 
+Bundle 'vim-scripts/taglist.vim'
+
 Bundle 'wavded/vim-stylus'
 
 Bundle 'ervandew/supertab'
@@ -26,6 +28,9 @@ Bundle 'garbas/vim-snipmate'
 " Bundle 'ervandew/snipmate.vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
+
+Bundle "mattn/webapi-vim"
+Bundle "mattn/gist-vim"
 
 Bundle "terryma/vim-multiple-cursors"
 
