@@ -16,8 +16,8 @@ if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'MacVim.app')
     colorscheme solarized
   else
-    colorscheme solarized
-"    colorscheme deus
+  "  colorscheme solarized
+    colorscheme deus
   endif
 endif
 
@@ -50,8 +50,10 @@ nmap \M :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 " random mappings
-" nmap <C-N> :bnext<CR>
+" nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
+
+let JSHintUpdateWriteOnly=1
 
 nmap <leader>ww :Gstatus<CR>
 nmap <leader>wg :Gdiff<CR>
@@ -153,3 +155,10 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " remove preview window for tern completion
 autocmd BufEnter * set completeopt-=preview
+
+imap <C-c> <CR><Esc>O
+
+
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview

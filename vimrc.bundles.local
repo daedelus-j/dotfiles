@@ -16,7 +16,7 @@ Bundle 'Rip-Rip/clang_complete'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'einars/js-beautify'
 Bundle 'digitaltoad/vim-jade'
-
+Bundle 'terryma/vim-multiple-cursors'
 Bundle 'wavded/vim-stylus'
 
 Bundle 'ervandew/supertab'
@@ -34,3 +34,4 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'lukerandall/haskellmode-vim'
 " Bundle 'jerrymarino/xcodebuild.vim'
+Bundle 'Raimondi/delimitMate'
