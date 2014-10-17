@@ -103,16 +103,14 @@ let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_max_depth=60
 " let g:ctrlp_working_path_mode = 'ra'
-
-set omnifunc=syntaxcomplete#Complete
-
 let g:ctrlp_max_files = 0
 let g:ctrlp_working_path_mode = 0
-
 " nmap ; :CtrlPBuffer<CR>
 nmap <leader>T :CtrlPMRU<CR>
 " nmap <leader>t :CtrlPClearCache<CR>:CtrlP<CR>
 nmap <leader>t :CtrlP<CR>
+
+set omnifunc=syntaxcomplete#Complete
 
 " JSBeuatify config
 map <c-f> :call JsBeautify()<cr>
@@ -138,9 +136,6 @@ set autoindent
 set copyindent
 set nowrap
 
-
-let g:ctrlp_match_window = 'order:ttb,max:20'
-
 let JSHintUpdateWriteOnly=1
 
 if filereadable(expand("~/.vimrc.local.mappings"))
@@ -162,3 +157,6 @@ imap <C-c> <CR><Esc>O
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
+
+" show quotes in json files
+let g:vim_json_syntax_conceal = 0
