@@ -3,7 +3,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
@@ -68,7 +68,7 @@
   ai = add --interactive
 
   co = checkout
-  br = branch 
+  br = branch
 #"!git branch -ra | grep -v done"
   bra = branch -ra
 #list commands
@@ -142,7 +142,7 @@ rem="!git config -l | grep remote.*url | tail -n +2"
   lap = "!f() { git --git-dir=$1 format-patch -k -1 --stdout $2 | git am -3 -k; }; f"
 
 #subtree add
-  sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f" 
+  sba = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
 # }}}
 
 [rerere]

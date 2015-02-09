@@ -12,7 +12,10 @@ inoremap jk <ESC>
 "nmap <leader>hl :let @/ = ""<CR>
 
 
-" gui settings
+" guted :source ~/.vimrc
+" :filetype detect
+" :exe ":echo 'vimrc reloaded'"
+" settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'MacVim.app')
     colorscheme solarized
@@ -20,6 +23,7 @@ if (&t_Co == 256 || has('gui_running'))
     colorscheme deus
   endif
 endif
+
 
 set backupdir^=~/.vim/_backup//    " where to put backup files.
 set directory^=~/.vim/_temp//      " where to put swap files.
@@ -144,10 +148,90 @@ endif
 "   let g:snips_trigger_key = '< tab>'
 " endif
 
-let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabDefaultCompletionType = "context"
 
 " remove preview window for tern completion
 autocmd BufEnter * set completeopt-=preview
 
 " show quotes in json files
 let g:vim_json_syntax_conceal = 0
+
+" Gist options
+let g:gist_clip_command = 'pbcopy'
+let g:gist_detect_filetype = 1
+let g:gist_show_privates = 1
+
+let g:clang_library_path = "/usr/lib"
+let g:clang_library_file = "libclang.so.1"
+let g:clang_use_library = 1
+let b:clang_user_options = '-std=c++11'
+let g:clang_complete_auto = 1
+
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set termencoding=utf-8
+
+if has("gui_running")
+  let s:uname = system("uname")
+  if s:uname == 'Darwin\n'
+    set guifont=Inconsolata\ for\ Powerline:h15
+  endif
+else
+  set term=xterm-256color
+endif
+
+
+" let g:EclimCompletionMethod = 'omnifunc'
+
+let g:ycm_register_as_syntastic_checker = 1 "default 1
+let g:Show_diagnostics_ui = 1 "default 1
+
+"will put icons in Vim's gutter on lines that have a diagnostic set.
+"Turning this off will also turn off the YcmErrorLine and YcmWarningLine
+"highlighting
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_always_populate_location_list = 1 "default 0
+let g:ycm_open_loclist_on_ycm_diags = 1 "default 1
+
+
+let g:ycm_complete_in_strings = 1 "default 1
+let g:ycm_collect_identifiers_from_tags_files = 0 "default 0
+let g:ycm_path_to_python_interpreter = '' "default ''
+
+
+let g:ycm_server_use_vim_stdout = 0 "default 0 (logging to console)
+let g:ycm_server_log_level = 'info' "default info
+
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  "where to search for .ycm_extra_conf.py if not found
+let g:ycm_confirm_extra_conf = 1
+
+
+let g:ycm_goto_buffer_command = 'same-buffer' "[ 'same-buffer', 'horizontal-split', 'vertical-split', 'new-tab' ]
+let g:ycm_filetype_whitelist = { '*': 1 }
+let g:ycm_key_invoke_completion = '<C-Space>'
+
+autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
+
+" tslime {{{
+let g:tslime_ensure_trailing_newlines = 1
+let g:tslime_normal_mapping = '<localleader>q'
+let g:tslime_visual_mapping = '<localleader>q'
+let g:tslime_vars_mapping = '<localleader>Q'
+" }}}
+
+" niji {{{
+let g:niji_dark_colours = [
+    \ [ '81', '#5fd7ff'],
+    \ [ '99', '#875fff'],
+    \ [ '1',  '#dc322f'],
+    \ [ '76', '#5fd700'],
+    \ [ '3',  '#b58900'],
+    \ [ '2',  '#859900'],
+    \ [ '6',  '#2aa198'],
+    \ [ '4',  '#268bd2'],
+    \ ]
+" }}}

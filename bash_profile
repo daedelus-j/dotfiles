@@ -10,6 +10,8 @@ source ~/.bash/prompt
 source ~/.bash/profile
 source ~/.bash/extras
 
+export NODE_ENV=local
+
 #function parse_git_dirty {
 #  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 #}
