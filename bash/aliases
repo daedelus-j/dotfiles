@@ -6,6 +6,7 @@ alias pmobile="cd ~/projects/apps/mobile"
 alias ns="npm start"
 alias ni="npm install"
 alias ndev="NODE_ENV=local nodemon -w . mobile.js"
+alias coindex="git checkout app/pages/editor/templates/index.jade"
 
 # cd
 alias ..='cd ..'

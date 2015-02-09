@@ -13,7 +13,6 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles.local
 endif
 
-
 filetype plugin indent on
 
 " enable syntax highlighting
@@ -22,7 +21,8 @@ syntax enable
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
 set backspace=2                                              " Fix broken backspace in some setups
-set backupcopy=yes                                           " see :help crontab
+"set backupcopy=yes                                           " see :help crontab
+"set clipboard=unnamed                                        " yank and paste with the system clipboard
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
 set expandtab                                                " expand tabs to spaces
@@ -60,22 +60,30 @@ nmap <leader>a :Ack<space>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
-nmap <leader>t :CtrlP<CR>
+nmap <leader>t :CtrlPMRU<CR>
 nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
-"nmap <leader>] :TagbarToggle<CR>
+nmap <leader>] :TagbarToggle<CR>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 " nmap <silent> <leader>V nested :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 " au BufWritePost .vimrc so ~/.vimrc
 
+" NERDCommenter mappings
+if has("gui_macvim") && has("gui_running")
+  map <D-/> <plug>NERDCommenterToggle<CR>
+  imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
+else
+  map <leader> <plug>NERDCommenterToggle<CR>
+endif
+
 " in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
 
 " plugin settings
-let g:ctrlp_match_window = 'order:ttb,max:20'
+let g:ctrlp_match_window = 'order:ttb,max:25'
 let g:NERDSpaceDelims=1
-let g:gitgutter_enabled = 1 
+let g:gitgutter_enabled = 0
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -85,10 +93,11 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s'
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+
 endif
 
 " fdoc is yaml
@@ -123,8 +132,7 @@ if filereadable(expand("~/.vimrc.local"))
   " set nowritebackup
   " set whichwrap+=<,>,h,l,[,] " Wrap arrow keys between lines
   "
-  " autocmd! bufwritepost .vimrc source ~/.vimrc
-  " noremap! jj <ESC>
+  autocmd! bufwritepost .vimrc source ~/.vimrc
   source ~/.vimrc.local
 endif
 

@@ -16,14 +16,15 @@ inoremap jk <ESC>
 " :filetype detect
 " :exe ":echo 'vimrc reloaded'"
 " settings
+" gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'MacVim.app')
     colorscheme solarized
   else
+  "  colorscheme solarized
     colorscheme deus
   endif
 endif
-
 
 set backupdir^=~/.vim/_backup//    " where to put backup files.
 set directory^=~/.vim/_temp//      " where to put swap files.
@@ -55,7 +56,10 @@ nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 " random mappings
 " nmap <C-N> :bnext<CR>
+" nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
+
+let JSHintUpdateWriteOnly=1
 
 nmap <leader>ww :Gstatus<CR>
 nmap <leader>wg :Gdiff<CR>
@@ -152,6 +156,13 @@ endif
 
 " remove preview window for tern completion
 autocmd BufEnter * set completeopt-=preview
+
+imap <C-c> <CR><Esc>O
+
+
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
 
 " show quotes in json files
 let g:vim_json_syntax_conceal = 0

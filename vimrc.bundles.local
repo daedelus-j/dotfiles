@@ -8,6 +8,9 @@ Bundle 'suan/vim-instant-markdown'
 " Bundle 'Yggdroot/indentLine'
 Bundle 'mustache/vim-mustache-handlebars'
 
+Bundle 'Yggdroot/indentLine'
+Bundle 'heavenshell/vim-jsdoc'
+Bundle 'nono/vim-handlebars'
 Bundle 'ChrisJohnsen/tmux-MacOSX-pasteboard'
 
 " Failed attempt at ios in vim
@@ -26,12 +29,19 @@ Bundle 'heavenshell/vim-jsdoc'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'wavded/vim-stylus'
+Bundle 'terryma/vim-multiple-cursors'
+
 Bundle 'vim-scripts/taglist.vim'
 
 
 " Bundle 'ervandew/supertab'
 Bundle 'garbas/vim-snipmate'
 
+Bundle 'tpope/vim-surround'
+Bundle 'altercation/vim-colors-solarized'
+" Bundle 'honza/vim-snippets'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'ervandew/snipmate.vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "mattn/gist-vim"
@@ -49,3 +59,4 @@ Bundle 'amdt/vim-niji'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'sjl/tslime.vim'
 
+Bundle 'Raimondi/delimitMate'
