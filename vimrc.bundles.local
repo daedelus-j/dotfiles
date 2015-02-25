@@ -1,26 +1,14 @@
 Bundle 'scrooloose/nerdcommenter'
-
-" Bundle 'mattn/emmet-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'pivotal/tmux-config'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'suan/vim-instant-markdown'
-" Bundle 'Yggdroot/indentLine'
 Bundle 'mustache/vim-mustache-handlebars'
-
 Bundle 'Yggdroot/indentLine'
-Bundle 'heavenshell/vim-jsdoc'
 Bundle 'nono/vim-handlebars'
 Bundle 'ChrisJohnsen/tmux-MacOSX-pasteboard'
-
-" Failed attempt at ios in vim
-" Bundle 'eraserhd/vim-ios'
-" Bundle 'eraserhd/vim-kiwi'
-" Bundle 'msanders/cocoa.vim'
-
 Bundle 'lukerandall/haskellmode-vim'
 Bundle 'Rip-Rip/clang_complete'
-
 Bundle 'ervandew/eclim'
 Bundle 'wookiehangover/jshint.vim'
 Bundle 'kchmck/vim-coffee-script'
@@ -29,19 +17,8 @@ Bundle 'heavenshell/vim-jsdoc'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'wavded/vim-stylus'
-Bundle 'terryma/vim-multiple-cursors'
-
 Bundle 'vim-scripts/taglist.vim'
-
-
-" Bundle 'ervandew/supertab'
 Bundle 'garbas/vim-snipmate'
-
-Bundle 'tpope/vim-surround'
-Bundle 'altercation/vim-colors-solarized'
-" Bundle 'honza/vim-snippets'
-" Bundle 'msanders/snipmate.vim'
-" Bundle 'ervandew/snipmate.vim'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "mattn/gist-vim"
@@ -49,14 +26,20 @@ Bundle "mattn/webapi-vim"
 Bundle "terryma/vim-multiple-cursors"
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
-
-" Bundle 'jerrymarino/xcodebuild.vim'
-" Bundle 'vim-scripts/OmniCppComplete'
-
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
 Bundle 'amdt/vim-niji'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'sjl/tslime.vim'
-
 Bundle 'Raimondi/delimitMate'
+Bundle 'mxw/vim-jsx'
+
+" Failed attempt at ios in vim
+" Bundle 'eraserhd/vim-ios'
+" Bundle 'eraserhd/vim-kiwi'
+" Bundle 'msanders/cocoa.vim'
+" Bundle 'ervandew/supertab'
+" Bundle 'jerrymarino/xcodebuild.vim'
+" Bundle 'vim-scripts/OmniCppComplete'
+" Bundle 'honza/vim-snippets'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'ervandew/snipmate.vim'
