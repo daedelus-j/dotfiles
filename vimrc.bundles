@@ -1,35 +1,110 @@
 " Maximum Awesome.
 " Please create ~/.vim.bundles.local and add any extra bundles you want there
 " Bundle 'airblade/vim-gitgutter'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'austintaylor/vim-indentobject'
+" Bundle!
 Bundle 'gmarik/vundle'
-Bundle 'juvenn/mustache.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-bundler'
+
+" Color Schemes
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-vividchalk'
+
+" Syntax
+Bundle 'eventualbuddha/vim-protobuf'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-pastie'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-rails'
+
+" Vim Edit Tools
+Bundle 'austintaylor/vim-indentobject'
+Bundle 'tpope/vim-pastie' " pastie.org
+Bundle 'tpope/vim-unimpaired' " text moves w brackets
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'eventualbuddha/vim-protobuf'
-Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/kwbdi.vim' " buffer mgmt
 Bundle 'vim-scripts/Align'
-Bundle 'vim-scripts/greplace.vim'
-Bundle 'vim-scripts/kwbdi.vim'
-Bundle 'vim-scripts/matchit.zip'
+Bundle 'vim-scripts/greplace.vim' " multi-file search and replace
+Bundle 'vim-scripts/matchit.zip' " % extension ?
+Bundle "terryma/vim-multiple-cursors"
+Bundle "tomtom/tlib_vim"
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle 'garbas/vim-snipmate'
+Bundle 'Raimondi/delimitMate' " autoclose parens
+Bundle 'scrooloose/nerdtree'
+" Bundle 'honza/vim-snippets'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'ervandew/snipmate.vim'
 
+" Comments
+Bundle 'tpope/vim-commentary' " comments
+Bundle 'scrooloose/nerdcommenter'
+
+" Indent
+Bundle 'Yggdroot/indentLine'
+Bundle 'nathanaelkane/vim-indent-guides'
+
+" Vim UI
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Auto-complete / Search
+Bundle 'kien/ctrlp.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'mileszs/ack.vim'
+Bundle 'Rip-Rip/clang_complete'
+Bundle 'ervandew/eclim'
+Bundle 'marijnh/tern_for_vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'vim-scripts/taglist.vim'
+" Bundle 'vim-scripts/OmniCppComplete'
+" Bundle 'ervandew/supertab'
+
+
+" JS / CSS / JS Templates
+Bundle 'wookiehangover/jshint.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'heavenshell/vim-jsdoc'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'mxw/vim-jsx'
+Bundle 'wavded/vim-stylus'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'nono/vim-handlebars'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'tpope/vim-ragtag' " html mappings
+Bundle 'juvenn/mustache.vim'
+
+" Git Tools
+Bundle 'tpope/vim-fugitive'
+Bundle "mattn/gist-vim"
+
+" Ruby
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-endwise' " adds end in ruby
+
+" Tmux
+Bundle 'pivotal/tmux-config'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'ChrisJohnsen/tmux-MacOSX-pasteboard'
+Bundle 'sjl/tslime.vim'
+
+" Lisp
+Bundle 'vim-scripts/paredit.vim'
+Bundle 'amdt/vim-niji' " parentheses rainbow
+
+" Haskell
+Bundle 'lukerandall/haskellmode-vim'
+
+" Markdown
+Bundle 'suan/vim-instant-markdown'
+
+" Misc
+Bundle "mattn/webapi-vim"
+
+" Failed attempt at ios in vim
+" Bundle 'eraserhd/vim-ios'
+" Bundle 'eraserhd/vim-kiwi'
+" Bundle 'msanders/cocoa.vim'
+" Bundle 'jerrymarino/xcodebuild.vim'
 
