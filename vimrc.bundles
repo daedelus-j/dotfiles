@@ -5,47 +5,67 @@
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-bundler'
 
+" /////////
 " Color Schemes
+" /////////
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 
+" /////////
 " Syntax
+" /////////
 Bundle 'eventualbuddha/vim-protobuf'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/vim-slim'
 
+" /////////
 " Vim Edit Tools
+" /////////
 Bundle 'austintaylor/vim-indentobject'
-Bundle 'tpope/vim-pastie' " pastie.org
-Bundle 'tpope/vim-unimpaired' " text moves w brackets
+" pastie.org
+Bundle 'tpope/vim-pastie'
+" text moves w brackets
+Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/kwbdi.vim' " buffer mgmt
+" buffer mgmt
+Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'vim-scripts/Align'
-Bundle 'vim-scripts/greplace.vim' " multi-file search and replace
-Bundle 'vim-scripts/matchit.zip' " % extension ?
+" multi-file search and replace
+Bundle 'vim-scripts/greplace.vim'
+" % extension ?
+Bundle 'vim-scripts/matchit.zip'
 Bundle "terryma/vim-multiple-cursors"
 Bundle "tomtom/tlib_vim"
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle 'garbas/vim-snipmate'
-Bundle 'Raimondi/delimitMate' " autoclose parens
+" autoclose parens
+Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdtree'
 " Bundle 'honza/vim-snippets'
 " Bundle 'msanders/snipmate.vim'
 " Bundle 'ervandew/snipmate.vim'
 
+" /////////
 " Comments
-Bundle 'tpope/vim-commentary' " comments
+" /////////
+Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/nerdcommenter'
 
+" /////////
 " Indent
+" /////////
 Bundle 'Yggdroot/indentLine'
 Bundle 'nathanaelkane/vim-indent-guides'
 
+" /////////
 " Vim UI
+" /////////
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+" /////////
 " Auto-complete / Search
+" /////////
 Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
@@ -58,7 +78,9 @@ Bundle 'vim-scripts/taglist.vim'
 " Bundle 'ervandew/supertab'
 
 
+" /////////
 " JS / CSS / JS Templates
+" /////////
 Bundle 'wookiehangover/jshint.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'heavenshell/vim-jsdoc'
@@ -70,36 +92,53 @@ Bundle 'wavded/vim-stylus'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'nono/vim-handlebars'
 Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'tpope/vim-ragtag' " html mappings
+" html mappings
+Bundle 'tpope/vim-ragtag' 
 Bundle 'juvenn/mustache.vim'
 
+" /////////
 " Git Tools
+" /////////
 Bundle 'tpope/vim-fugitive'
 Bundle "mattn/gist-vim"
 
+" /////////
 " Ruby
+" /////////
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-endwise' " adds end in ruby
+" adds end in ruby
+Bundle 'tpope/vim-endwise' 
 
+" /////////
 " Tmux
+" /////////
 Bundle 'pivotal/tmux-config'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'ChrisJohnsen/tmux-MacOSX-pasteboard'
 Bundle 'sjl/tslime.vim'
 
+" /////////
 " Lisp
+" /////////
 Bundle 'vim-scripts/paredit.vim'
-Bundle 'amdt/vim-niji' " parentheses rainbow
+" parentheses rainbow
+Bundle 'amdt/vim-niji' 
 
+" /////////
 " Haskell
+" /////////
 Bundle 'lukerandall/haskellmode-vim'
 
+" /////////
 " Markdown
+" /////////
 Bundle 'suan/vim-instant-markdown'
 
+" /////////
 " Misc
+" /////////
 Bundle "mattn/webapi-vim"
 
 " Failed attempt at ios in vim
