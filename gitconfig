@@ -3,7 +3,7 @@
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
@@ -19,6 +19,7 @@
 [core]
   autocrlf = input
   editor = vim
+	excludesfile = /Users/amadeus/.gitignore_global
 
 [push]
   default = current
