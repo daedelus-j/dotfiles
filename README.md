@@ -11,6 +11,10 @@ peace-loving hippies. Built for Mac OS X.
 * Awesome syntax highlighting with the [Solarized color scheme](http://ethanschoonover.com/solarized)
 * Want to know more? [Fly Vim, First Class](http://corner.squareup.com/2013/08/fly-vim-first-class.html)
 
+### iterms prefs (forward-word, back-word, word-delete, etc...)
+
+![](https://www.evernote.com/shard/s471/sh/35d1e8f4-1495-4847-8b54-17097a0ebebd/c3b30bd34d0b2d47ee623a4a0dfefba8/deep/0/Preferences-and-1.-bash.png)
+
 ### vim
 
 * `,d` brings up [NERDTree](https://github.com/scrooloose/nerdtree), a sidebar buffer for navigating and manipulating files
@@ -70,3 +74,4 @@ request, we'll make sure you're in the list of people who have signed a CLA.
 
 Thanks to the vimsters at Square who put this together. Thanks to Tim Pope for
 his awesome vim plugins.
+

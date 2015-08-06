@@ -8,12 +8,14 @@ Bundle 'tpope/vim-bundler'
 " /////////
 " Color Schemes
 " /////////
+
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 
 " /////////
 " Syntax
 " /////////
+
 Bundle 'eventualbuddha/vim-protobuf'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/vim-slim'
@@ -21,6 +23,8 @@ Bundle 'slim-template/vim-slim'
 " /////////
 " Vim Edit Tools
 " /////////
+
+Bundle 'easymotion/vim-easymotion'
 Bundle 'austintaylor/vim-indentobject'
 " pastie.org
 Bundle 'tpope/vim-pastie'
@@ -38,11 +42,12 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle "terryma/vim-multiple-cursors"
 Bundle "tomtom/tlib_vim"
 Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
+" Bundle 'garbas/vim-snipmate'
 " autoclose parens
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'honza/vim-snippets'
 " Bundle 'msanders/snipmate.vim'
 " Bundle 'ervandew/snipmate.vim'
 
@@ -118,6 +123,7 @@ Bundle 'pivotal/tmux-config'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'ChrisJohnsen/tmux-MacOSX-pasteboard'
 Bundle 'sjl/tslime.vim'
+Bundle 'vim-scripts/Vitality'
 
 " /////////
 " Lisp

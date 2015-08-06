@@ -3,7 +3,6 @@
 root = true
 
 [**.js]
-path=~/.vim/bundle/js-beautify/js/lib/beautify.js
 ; Javascript interpreter to be invoked by default 'node'
 bin=node
 indent_style = space
@@ -11,7 +10,6 @@ max_char = 100
 indent_size = 2
 
 [**.css]
-path=~/.vim/bundle/js-beautify/js/lib/beautify-css.js
 indent_style = space
 indent_size = 4
 
@@ -24,7 +22,6 @@ indent_size = 4
 ; And such comments or apply only in global configuration
 ; So it's best to avoid them
 ;vim:max_char=78:brace_style=expand
-vim:path=~/.vim/bundle/js-beautify/js/lib/beautify-html.js
 indent_style = space
 indent_size = 2
 max_char = 100
@@ -40,4 +37,3 @@ brace_style = expand
 indent_style = space
 indent_size = 2
 brace_style = expand
-

@@ -6,13 +6,13 @@ export PATH=$HOME/opt/cross/bin:$PATH:/usr/local/Cellar/node/0.10.18/bin/:/home/
 
 echo ' '
 echo -n '  A '
-sleep .2
+sleep .1
 echo '  to the'
 echo -n '    M '
-sleep .2
+sleep .1
 echo '  to the'
 echo -n '      A '
-sleep .2
+sleep .1
 echo '  to the'
 echo '        DEUS'
 echo ''

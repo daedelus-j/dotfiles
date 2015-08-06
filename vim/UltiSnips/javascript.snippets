@@ -1,0 +1,208 @@
+snippet try "try {} catch {}"
+try {
+	${1}
+} catch(e){
+	${2}
+}
+endsnippet
+
+snippet emit ".emit"
+.emit('${1}', ${2});
+endsnippet
+
+snippet on ".on"
+.on('${1}', ${2});
+endsnippet
+
+snippet cl "console log"
+console.log('${1}', ${2});
+endsnippet
+
+snippet db "debugger;"
+debugger;
+endsnippet
+
+snippet cname "className=''"
+className='${1}'
+endsnippet
+
+snippet t "tag in js file" b
+<${1:div} ${2}>
+	${3}
+</${1/(\w+).*/$1/}>
+endsnippet
+
+snippet rt "react component transform" b
+<${1:Component}
+	${2}=${3}
+	/>
+endsnippet
+
+snippet rel "react el"
+(
+	${1}
+);
+endsnippet
+
+snippet nrc "new browserify react component" b
+'use strict';
+
+var React = require('react');
+
+module.exports = React.createClass({
+	displayName: '${1}',
+
+	getInitialState: function getInitialState() {
+		return {
+			${2}: ${3}
+		};
+	},
+
+  render: function render() {
+    return (
+			<div></div>
+    );
+	}
+})
+endsnippet
+
+snippet rc "react component" b
+var ${1} = React.createClass({
+	displayName: '$1',
+
+	getInitialState: function getInitialState() {
+		return {
+			${3}: ${4}
+		};
+	},
+
+  render: function render() {
+    return (
+			<div></div>
+    );
+	}
+});
+endsnippet
+
+snippet rp "this.props"
+this.props.${1}
+endsnippet
+
+snippet rs "this.state"
+this.state.${1}
+endsnippet
+
+snippet rset "this.state" b
+this.setState({ ${1}:${2} });
+endsnippet
+
+snippet gis "getInitialState" b
+getInitialState: function getInitialState() {
+	${1}
+},
+endsnippet
+
+snippet cwm "component will mount" b
+componentWillMount: function componentWillMount() {
+	${1}
+},
+endsnippet
+
+snippet cdm "component will mount" b
+componentDidMount: function componentDidMount() {
+	${1}
+},
+endsnippet
+
+snippet amap "array map"
+${1}.map(function(${2}) {
+	return ${3};
+}, ${4});
+endsnippet
+
+snippet afilter "filter map"
+${1}.filter(function(${2}) {
+	return ${3};
+}, ${4});
+endsnippet
+
+snippet areduce "reduce map"
+${1}.reduce(function(prev, curr) {
+	return ${2};
+}, ${3});
+endsnippet
+
+snippet omt "<fn>: function <fn>(){},"
+${1}: function $1(${2}) {
+	${3}
+},
+endsnippet
+
+snippet var "<fn>: function <fn>(){},"
+var ${1} = ${2};
+endsnippet
+
+snippet if "if () {}"
+if (${1}) {
+	${2};
+} ${3}
+endsnippet
+
+snippet ifsm "if () ;"
+if (${1}) ${2};
+endsnippet
+
+snippet els "else {}"
+else {
+	${1};
+}
+endsnippet
+
+snippet elsm "else ;"
+else ${1};
+endsnippet
+
+snippet elif "else if () {}"
+else if (${1}) {
+	${2};
+}
+endsnippet
+
+snippet elifsm "else if () ;"
+else if (${1}) ${2};
+endsnippet
+
+snippet rq "require('')"
+require('${1}')${2}
+endsnippet
+
+snippet vrq "var a = require('')"
+var ${1} = require('${2}');
+endsnippet
+
+snippet exp "module.exports = ;"
+module.exports${1} = ${2};
+endsnippet
+
+snippet expfn "module.exports = fn(){}"
+module.exports${1} = function ${2}(${3}) {
+	${4}
+};
+endsnippet
+
+snippet nfn "var a = require('')"
+function ${1}(${2}) {
+	${3}
+}
+endsnippet
+
+snippet op " : ,"
+${1}: ${2}
+endsnippet
+
+snippet tp "test ()" b
+test('${1}', function(t) {
+	t.ok(${2}, '${3}');
+	t.end();
+});
+endsnippet
