@@ -13,19 +13,22 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles.local
 endif
 
+
+" --------------------
+" GENERAL SETTINGS
+" --------------------
+
 filetype plugin indent on
 
 " enable syntax highlighting
 syntax enable
 
-set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
 set backspace=2                                              " Fix broken backspace in some setups
 "set backupcopy=yes                                           " see :help crontab
 "set clipboard=unnamed                                        " yank and paste with the system clipboard
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
-set expandtab                                                " expand tabs to spaces
 set ignorecase                                               " case-insensitive search
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
@@ -33,15 +36,21 @@ set list                                                     " show trailing whi
 set listchars=tab:▸\ ,trail:▫
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
-set shiftwidth=2                                             " normal mode indentation commands use 2 spaces
 set showcmd
 set smartcase                                                " case-sensitive search if any caps
-set softtabstop=2                                            " insert mode tab and backspace use 2 spaces
-set tabstop=2                                                " actual tabs occupy 8 characters
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
 set number
+set nocursorline                                             " don't highlight current line
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
+set copyindent
+set nowrap
+set shortmess+=A                                            " ignore existing swp files
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
@@ -49,25 +58,39 @@ if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
-" keyboard shortcuts
+" Shortcuts
 let mapleader = '\'
+" easier navigation between windows
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+inoremap jk <ESC>
+
+" Plugin Keyboard Shortcuts
 map <leader>l :Align
 nmap <leader>a :Ack<space>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
+nmap <leader>ff :NERDTreeFind<CR>
 nmap <leader>t :CtrlPMRU<CR>
 nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nmap <leader>] :TagbarToggle<CR>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+" ---------------------------------
+" VIM SPECIFIC PLUGIN SETTINGS
+" ---------------------------------
+
+let g:ctrlp_match_window = 'order:ttb,max:25'
+let g:NERDSpaceDelims=1
+let g:gitgutter_enabled = 0
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
 
 " NERDCommenter mappings
 if has("gui_macvim") && has("gui_running")
@@ -79,11 +102,6 @@ endif
 
 " in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
-
-" plugin settings
-let g:ctrlp_match_window = 'order:ttb,max:25'
-let g:NERDSpaceDelims=1
-let g:gitgutter_enabled = 0
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -102,6 +120,7 @@ endif
 
 " fdoc is yaml
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
+
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 " extra rails.vim help
@@ -123,39 +142,11 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" Go crazy!
-if filereadable(expand("~/.vimrc.local"))
-  " In your .vimrc.local, you might like:
-  "
-  " set autowrite
-  " set nocursorline
-  " set nowritebackup
-  " set whichwrap+=<,>,h,l,[,] " Wrap arrow keys between lines
-  "
-  autocmd! bufwritepost .vimrc source ~/.vimrc
-  source ~/.vimrc.local
-endif
-
-
-
-
-let mapleader = '\'
-
-set nocursorline " don't highlight current line
-
-" keyboard shortcuts
-inoremap jk <ESC>
-" imap jk <Esc>
 
 " highlight search
 "set hlsearch
 "nmap <leader>hl :let @/ = ""<CR>
 
-
-" guted :source ~/.vimrc
-" :filetype detect
-" :exe ":echo 'vimrc reloaded'"
-" settings
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
   if ($TERM_PROGRAM == 'MacVim.app')
@@ -186,7 +177,6 @@ endfunction
 command! -nargs=0 RemoveConflictingAlignMaps call s:RemoveConflictingAlignMaps()
 silent! autocmd VimEnter * RemoveConflictingAlignMaps
 
-nmap <leader>ff :NERDTreeFind<CR>
 
 " different tab settings for different langs
 nmap \M :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
@@ -195,7 +185,6 @@ nmap \M :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 
 " random mappings
-" nmap <C-N> :bnext<CR>
 " nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 
@@ -206,20 +195,6 @@ nmap <leader>wg :Gdiff<CR>
 
 " find and replace in visual mode
 vmap <C-r> <Esc>:%s/<C-r>+//gc<left><left><left>
-
-" set zencoding to ctrl-e
-" let g:user_zen_expandabbr_key = '<c-e>'
-" let g:use_zen_complete_tag = 1
-
-let g:user_emmet_install_global = 0
-autocmd FileType tmpl,html,css EmmetInstall
-" let g:user_emmet_leader_key='<c-e>'
-
-" generate doc comment template
-map <leader>wc :JsDoc<cr>
-let g:jsdoc_default_mapping = 0
-let g:jsdoc_additional_descriptions = 1
-let g:jsdoc_allow_input_prompt = 1
 
 "From http://vimcasts.org/episodes/tidying-whitespace/
 "Preserves/Saves the state, executes a command, and returns to the saved state
@@ -237,11 +212,14 @@ endfunction
 "strip all trailing white space
 autocmd BufWritePre :call whitespace#strip_trailing()<CR>
 
-" easier navigation between windows
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" call ReloadAllSnippets()
+
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+" --------------------
+" MAPPINGS HELPERS
+" --------------------
 
 let g:ctrlp_match_window_bottom = 1
 let g:ctrlp_match_window = 'order:ttb,max:25'
@@ -258,8 +236,42 @@ nmap <leader>t :CtrlP<CR>
 
 set omnifunc=syntaxcomplete#Complete
 
-" JSX in JS files
-let g:jsx_ext_required = 0
+
+if filereadable(expand("~/.vimrc.local.mappings"))
+  source ~/.vimrc.local.mappings
+endif
+
+" if !exists('g:snips_trigger_key')
+"   let g:snips_trigger_key = '< tab>'
+" endif
+
+let g:SuperTabDefaultCompletionType = "context"
+
+" remove preview window for tern completion
+autocmd BufEnter * set completeopt-=preview
+
+imap <C-c> <CR><Esc>O
+
+
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
+
+" ---------------
+" JAVASCRIPT
+" ---------------
+
+au BufRead,BufNewFile *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+
+" generate doc comment template
+map <leader>wc :JsDoc<cr>
+let g:jsdoc_default_mapping = 0
+let g:jsdoc_additional_descriptions = 1
+let g:jsdoc_allow_input_prompt = 1
 
 " JSBeuatify config
 map <c-f> :call JsBeautify()<cr>
@@ -272,23 +284,50 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 autocmd FileType scss noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
-
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set autoindent
-set copyindent
-set nowrap
-
 let JSHintUpdateWriteOnly=1
 
-if filereadable(expand("~/.vimrc.local.mappings"))
-  source ~/.vimrc.local.mappings
-endif
+" show quotes in json files
+let g:vim_json_syntax_conceal = 0
+
+" --------------------
+" PYTHON
+" --------------------
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+let python_highlight_all=1
+syntax on
+
+" Legacy
+
+" Split files
+" if filereadable(expand("~/.vimrc.local"))
+  " " In your .vimrc.local, you might like:
+  " "
+  " " set autowrite
+  " " set nocursorline
+  " " set nowritebackup
+  " " set whichwrap+=<,>,h,l,[,] " Wrap arrow keys between lines
+  " "
+  " autocmd! bufwritepost .vimrc source ~/.vimrc
+  " source ~/.vimrc.local
+" endif
 
 " call ReloadAllSnippets()
 " imap <c-j> <Plug>snipMateNextOrTrigger
@@ -342,6 +381,8 @@ else
 endif
 
 
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 " let g:EclimCompletionMethod = 'omnifunc'
 
 let g:ycm_register_as_syntastic_checker = 1 "default 1
@@ -395,6 +436,3 @@ let g:niji_dark_colours = [
     \ ]
 " }}}
 
-
-" easymotion
-map <Leader> <Plug>(easymotion-prefix)

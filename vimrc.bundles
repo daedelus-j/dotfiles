@@ -19,6 +19,10 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'eventualbuddha/vim-protobuf'
 Bundle 'scrooloose/syntastic'
 Bundle 'slim-template/vim-slim'
+Bundle 'evanmiller/nginx-vim-syntax'
+Bundle 'othree/yajs.vim'
+Bundle 'elzr/vim-json'
+Bundle 'mxw/vim-jsx'
 
 " /////////
 " Vim Edit Tools
@@ -48,6 +52,7 @@ Plugin 'SirVer/ultisnips'
 " autoclose parens
 Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdtree'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 " Bundle 'msanders/snipmate.vim'
 " Bundle 'ervandew/snipmate.vim'
 
@@ -86,19 +91,17 @@ Bundle 'vim-scripts/taglist.vim'
 " /////////
 " JS / CSS / JS Templates
 " /////////
-Bundle 'wookiehangover/jshint.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'heavenshell/vim-jsdoc'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'leafgarland/typescript-vim'
-Bundle 'mxw/vim-jsx'
 Bundle 'wavded/vim-stylus'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'nono/vim-handlebars'
 Bundle 'mustache/vim-mustache-handlebars'
 " html mappings
-Bundle 'tpope/vim-ragtag' 
+Bundle 'tpope/vim-ragtag'
 Bundle 'juvenn/mustache.vim'
 
 " /////////
@@ -114,7 +117,14 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 " adds end in ruby
-Bundle 'tpope/vim-endwise' 
+Bundle 'tpope/vim-endwise'
+
+
+" /////////
+" Python
+" /////////
+Bundle 'vim-scripts/indentpython.vim'
+Bundle 'nvie/vim-flake8'
 
 " /////////
 " Tmux
@@ -130,7 +140,7 @@ Bundle 'vim-scripts/Vitality'
 " /////////
 Bundle 'vim-scripts/paredit.vim'
 " parentheses rainbow
-Bundle 'amdt/vim-niji' 
+" Bundle 'amdt/vim-niji'
 
 " /////////
 " Haskell
